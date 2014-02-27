@@ -2,7 +2,7 @@
 # Simple Dynamic Time Warping example
 
 function d(x, y)  
-    abs(x - y) 
+    sqrt( (x - y) * (x - y) )
 end
 
 
@@ -36,5 +36,5 @@ function DTW(seqA::Array{Int64}, seqB::Array{Int64})
         println("")
     end 
 
-    return cost[end,end]
+    return cost
 end
